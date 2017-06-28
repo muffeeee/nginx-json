@@ -1,6 +1,6 @@
 var readline = require('readline');
 rl = readline.createInterface({
-  input: require('fs').createReadStream("test.txt")
+  input: require('fs').createReadStream("example.conf")
 })
 Array.prototype.clean = function() {
   for (var i = 0; i < this.length; i++) {
