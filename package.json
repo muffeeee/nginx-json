@@ -1,0 +1,27 @@
+{
+    "name": "nginx-json",
+    "version": "1.0.0-beta",
+    "description": "An nginx to JSON config converter.",
+    "main": "index.js",
+    "directories": {
+      "example": "example"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/muffeeee/nginx-json.git"
+    },
+    "keywords": [
+      "json-nginx",
+      "nginx"
+    ],
+    "author": "Fredrik de Lange",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/muffeeee/nginx-json/issues"
+    },
+    "homepage": "https://github.com/muffeeee/nginx-json#readme"
+  }
+  

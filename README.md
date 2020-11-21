@@ -1,12 +1,10 @@
 # nginx-json
-A parser that converts nginx configs into a json file that my "json-nginx" can understand
+A parser that converts nginx configs into a json file that "json-nginx" can understand.
 
-Do NOT use this in a production enviroment.
-It has a bunch of bugs that currently renders it useless for large, somewhat-complicated nginx config files.
-Some of these bugs are:
-- some add_header parameters cause the script to go into an existential crisis, creating a huge nested array
-- the above issue also causes the script to just skip 90% of the code
-- please don't use this
+It's currently out in pre-beta testing. Feel free to test it yourself and give feedback, but expect it to break. I'd be very happy if you could try out nginx-json and json-nginx with some heavy and obscure configs to test out their stability!
 
-## Usage
-`node main.js`
+# Usage
+See "example" folder.
+
+# Related
+[json-nginx](https://github.com/muffeeee/json-nginx)
