@@ -61,7 +61,6 @@ class nginx2json {
         }
     }
     parseOptions(data) {
-        console.log("OPTIONS: " + data.toString())
         let options = data[0].trim().split(/ (.+)/).clean()
         this.addOptions(options[0], options[1])
     }
@@ -76,13 +75,10 @@ class nginx2json {
             this.current_object[directive] = [ this.current_object[directive], values ]
         }
         else {
-            console.log(directive)
-            console.log(typeof this.current_object[directive])
-            //throw new Error("Directive already exists, but is formatted incorrectly")
+            throw new Error("Directive already exists, but is formatted incorrectly")
         }
     }
     parseObjectStart(data) {
-        console.log("OBJSTART: " + data.toString());
         let object_params = data[0].trim().split(/ (.+)/).clean()
         this.addObject(object_params[0], object_params[1])
     }
@@ -95,7 +91,6 @@ class nginx2json {
         this.current_object._OBJECT_ARGS = args;
     }
     parseObjectEnd(data) {
-        console.log("OBJEND: " + data.toString())
         let object_result = this.current_object;
         let object_args = object_result._OBJECT_ARGS;
         delete object_result._OBJECT_ARGS;
@@ -127,7 +122,6 @@ class nginx2json {
     checkIfFinished() {
         if (this.object_paths.length == 0) {
             this.conf = this.current_object;
-            console.log(JSON.stringify(this.conf,null,2))
         }
     }
 }
